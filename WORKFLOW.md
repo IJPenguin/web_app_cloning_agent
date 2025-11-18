@@ -137,3 +137,4 @@ The agent will:
 3. Create visual tests
 
 All interactions are automated - just watch the browser!
+    

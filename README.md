@@ -4,33 +4,36 @@ An intelligent agent that automatically scrapes web applications, analyzes their
 
 ## ✨ Features
 
-- 🕷️ **Intelligent Web Scraping** - Automated browser automation with Playwright
-- 🧠 **AI-Powered Analysis** - Uses Google Gemini to analyze UI patterns
-- ⚛️ **React + Tailwind Frontend** - Generates pixel-perfect components
-- 🚀 **FastAPI + SQLite Backend** - Generates RESTful APIs
-- 📸 **Visual Testing** - Automated screenshot comparison
+-   🕷️ **Intelligent Web Scraping** - Automated browser automation with Playwright
+-   🧠 **AI-Powered Analysis** - Uses Google Gemini to analyze UI patterns
+-   ⚛️ **React + Tailwind Frontend** - Generates pixel-perfect components
+-   🚀 **FastAPI + SQLite Backend** - Generates RESTful APIs
+-   📸 **Visual Testing** - Automated screenshot comparison
 
 ## �� Quick Start
 
 ### Prerequisites
 
-- Node.js 18+
-- Google Gemini API key (FREE)
-- Asana account
+-   Node.js 18+
+-   Google Gemini API key (FREE)
+-   Asana account
 
 ### Installation
 
 **1. Install dependencies**
+
 ```powershell
 npm install
 ```
 
 **2. Configure environment**
+
 ```powershell
 cp .env.template .env
 ```
 
 Edit .env:
+
 ```env
 GEMINI_API_KEY=your_key_here
 LLM_MODEL=gemini-2.5-pro
@@ -41,11 +44,13 @@ ASANA_PASSWORD=your_password
 ## 📖 Usage
 
 **Step 1: Scrape Pages**
+
 ```powershell
 npm start
 ```
 
 **Step 2: Generate Code**
+
 ```powershell
 npm start generate:home      # Home page only
 npm start generate:projects  # Projects pages
@@ -54,6 +59,7 @@ npm start generate           # All pages
 ```
 
 **Step 3: Run Generated Apps**
+
 ```powershell
 cd output/frontend
 npm install && npm run dev
@@ -62,25 +68,6 @@ cd output/backend
 pip install -r requirements.txt
 uvicorn main:app
 ```
-
-## 🛠️ Commands
-
-- 
-pm start - Scrape (default)
-- 
-pm start scrape - Scrape pages
-- 
-pm start generate - Generate all
-- 
-pm start generate:home - Home only
-- 
-pm start generate:projects - Projects only
-- 
-pm start generate:tasks - Tasks only
-- 
-pm start test - Visual tests
-- 
-pm start all - Full pipeline
 
 ## 📁 Output
 
@@ -101,21 +88,23 @@ Change model to gemini-1.5-flash in .env
 Use staged generation (generate:home, then generate:projects, etc.)
 
 **No Data Found?**
-Run 
+Run
 pm start scrape first
 
 ## 🔧 Configuration
 
-| Variable | Description | Default |
-|----------|-------------|---------|
-| GEMINI_API_KEY | Gemini API key | Required |
-| LLM_MODEL | AI model | gemini-1.5-flash |
-| ASANA_EMAIL | Login email | Required |
-| ASANA_PASSWORD | Password | Required |
+| Variable       | Description    | Default          |
+| -------------- | -------------- | ---------------- |
+| GEMINI_API_KEY | Gemini API key | Required         |
+| LLM_MODEL      | AI model       | gemini-1.5-flash |
+| ASANA_EMAIL    | Login email    | Required         |
+| ASANA_PASSWORD | Password       | Required         |
 
 **Available Models:**
-- gemini-1.5-flash - Fast (15 req/min)
-- gemini-1.5-pro - Better quality (2 req/min)
+
+-   gemini-1.5-flash - Fast (15 req/min)
+-   gemini-1.5-pro - Better quality (2 req/min)
 
 ---
+
 **Made for Scaler Assignment** 🚀
